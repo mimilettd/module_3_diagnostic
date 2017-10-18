@@ -4,9 +4,7 @@ describe "Stations" do
   it "User can view 10 closest stations" do
     visit '/'
 
-    within(".form-group search-field") do
-      fill_in :search, with: "80203"
-    end
+    fill_in "q", with: "80203"
 
     click_on "Locate"
 
