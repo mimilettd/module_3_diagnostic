@@ -1,4 +1,5 @@
 class Station
+  attr_reader :name, :street, :city, :state, :zip, :fuel_type, :distance, :access_times
   def initialize(attrs = {})
     @name = attrs[:station_name]
     @street = attrs[:street_address]

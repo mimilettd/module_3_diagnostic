@@ -1,7 +1,12 @@
-<% stations.each do |station| %>
-  <%= station.name %>
-  <%= station.address %>
+<ul>
+  <% @stations.each do |station| %>
+    <h1><%= station.name %></h1>
+  <%= station.street %>
+  <%= station.city %>
+  <%= station.state %>
+  <%= station.zip %>
   <%= station.fuel_type %>
   <%= station.distance %>
   <%= station.access_times %>
 <% end %>
+</ul>
