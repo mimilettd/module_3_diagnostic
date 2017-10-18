@@ -5,7 +5,7 @@
         faraday.adapter  Faraday.default_adapter
       end
 
-      response = @conn.get("https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?api_key=#{ENV['api_key']}&fuel_type=LPG,ELEC&location=#{zip}&radius=6")
+      response = @conn.get("https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?api_key=#{ENV['api_key']}&fuel_type=LPG,ELEC&location=#{zip}&radius=6&limit=10")
       raw_data = JSON.parse(response.body, symbolize_names: true)[:fuel_stations]
 
       @stations = raw_data.map do |object|
